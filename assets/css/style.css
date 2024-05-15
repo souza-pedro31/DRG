@@ -1,0 +1,909 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,400;0,600;0,700;0,800;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Barlow", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    scrollbar-width: thin;
+    scrollbar-color: #D7D7D9 #212226;
+    scrollbar-arrow-color: #D7D7D9;
+}
+
+html {
+    overflow-x: hidden;
+    height: 200vh;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    margin: 0.5rem 1rem;
+    align-items: center;
+    font-size: 1rem;
+    height: 4.5rem;
+}
+
+.navbar a:hover{
+    font-size: 1.1rem;
+    transition: 50ms ease-in;
+}
+
+.cabecalho {
+    background: #f1f1f5;
+    position: fixed;
+    z-index: 50;
+    width: 100vw;
+}
+
+.navbar ul {
+    list-style-type: none;
+    color: #3C3D40;
+    display: flex;
+    padding-top: 4rem;
+    gap: 1rem;
+    position: absolute;
+    z-index: 50;
+}
+
+.navbar ul li {
+    margin-bottom: 0.5rem;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #3C3D40;
+    font-size: 14px;
+}
+
+.navbar a:visited {
+    color: #3C3D40;
+}
+
+.logotipo {
+    width: 9rem;
+    height: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 50;
+}
+
+.logotipo:hover {
+    width: 10rem;
+    height: 3rem;
+    transition: 100ms ease-in;
+
+}
+
+.ajuste {
+    height: 5.5rem;
+}
+
+.secao-slide {
+    margin-bottom: 4rem;
+}
+
+.slider {
+    display: block;
+    height: 50vw;
+    width: 100vw;
+    margin: auto;
+    position: relative;
+}
+
+.slider li {
+    list-style: none;
+    position: absolute;
+}
+
+.slider img {
+    margin: auto;
+    height: 100%;
+    width: 100%;
+    vertical-align: top;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slider input {
+    display: none;
+}
+
+.slider label {
+    animation-duration: 0.5s;
+    animation-name: subir;
+    animation-iteration-count: calc(5);
+    margin: 0;
+    background: #D7D7D9;
+    bottom: 10px;
+    cursor: pointer;
+    display: block;
+    height: 3vw;
+    position: absolute;
+    width: 3vw;
+    z-index: 10;
+    font-size: 1;
+    font-weight: bold;
+}
+
+.slider input:checked + label {
+    background: #212226;
+}
+
+.slider label:hover {
+    margin: 0;
+    background: #212226;
+    bottom: 10px;
+    cursor: pointer;
+    display: block;
+    height: 3vw;
+    position: absolute;
+    width: 3vw;
+    z-index: 10;
+}
+
+.slider li:nth-child(1) label {
+    left: 10px;
+}
+
+.slider li:nth-child(2) label {
+    left: 40px;
+}
+
+.slider li:nth-child(3) label {
+    left: 70px;
+}
+
+.slider img {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slider li input:checked ~ img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+
+        
+.img-servicos {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.img-servicos img {
+    width: 100vw;
+    height: 60vw;
+    margin: 0 1.5rem;
+    filter: grayscale(1);
+}
+
+
+.img-servicos img:active {     
+    filter: grayscale(0);
+    transition: 300ms ease-in-out;
+}
+
+.img-escritorio {
+    width: 99vw;
+    height: 80vh;
+}
+
+.subtituloh3-secao {
+    color: #3C3D40;
+    margin: 2rem 0rem 0rem 1.5rem;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.subtituloh2-secao {
+    margin: 3.5rem 0rem 0rem 1.5rem;
+    font-size: 2rem;
+}
+
+.tabela-cotacao {
+    border-collapse: collapse;
+    width: 99vw;
+    border-top: 1px solid #D7D7D9;
+    border-bottom: 1px solid #D7D7D9;
+}
+
+.tabela-cotacao-head {
+    border-collapse: collapse;
+    text-align: center;
+    border-bottom: 1px solid #D7D7D9;
+    font-weight: 100;
+}
+
+
+.tabela-cotacao-data {
+    border-collapse: collapse;
+    text-align: center;
+    border-top: 1px solid #D7D7D9;
+    border-bottom: 1px solid #D7D7D9;
+    font-size: 1rem;
+}
+
+.div-localizacao {
+    display: flex;
+    justify-content: center;
+}
+
+.mapa-localizacao {
+    width: 100vw;
+    height: 70vw;
+}
+
+.div-contato {
+    background: #3C3D40;
+    width: 100vw;
+    height: 20vw;
+    display: flex;
+}
+
+.div-sobre-nos {
+    background: #3C3D40;
+    width: 100vw;
+    height: 30vw;
+    display: flex;
+}
+
+.info-campo-email {
+    margin: 0.5rem 0;
+    text-decoration: none;
+    text-align: start;
+    width: 50vw;
+    padding: 0;
+}
+
+.info-sobre-nos {
+    margin: 0.5rem 1rem;
+    color: #D7D7D9;
+    font-size: 0.8rem;
+}
+
+.img-contato-email {
+    margin: 0.3rem;
+    width: 3vw;
+    height: 3vw;
+    filter: invert(80%);
+    margin: 0 1vw;
+}
+
+.link-contato-email{
+    text-decoration: underline;
+    color: #D7D7D9;
+    font-size: 1rem;
+}
+
+.info-campo-telefone {
+    margin: 0.5rem 0rem;
+    padding-bottom: 1rem;
+    text-decoration: none;
+    text-align: start;
+    width: 25vw;
+}
+
+
+.img-contato-telefone {
+    margin: 0.3rem;
+    width: 3vw;
+    height: 3vw;
+    filter: invert(80%);
+    margin: 0 1vw;
+}
+
+.link-contato-telefone {
+    text-decoration: underline;
+    color: #D7D7D9;
+    font-size: 1rem;
+}
+
+.img-contato {
+    margin: 0.4rem 0.5rem;
+    width: 20vw;
+    height: 17vw;
+}
+
+.img-sobre-nos {
+    margin: 0.5rem 1rem;
+    width: 30vw;
+    height: 27vw;
+}
+
+.rodape address{
+    background: #212226;
+    color: #D7D7D9;
+    font-style: normal;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    display: flex;
+    justify-content: left;
+}
+
+.enderecos {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    gap: 1rem;
+}
+
+.parag-endereco {
+    font-size: 0.8rem;
+}
+
+.rodape-email {
+    text-decoration: underline;
+    color: #D7D7D9;
+    margin: 0 1rem 0 0;
+}
+
+.linha-rodape-email {
+    background: #212226;
+    display: flex;
+    padding: 0 0 1vw 3vw;
+    font-size: 0.8rem;
+}
+
+.botao-rodape-topo {
+    width: 50px;
+    height: 50px;
+    background: #D7D7D9;
+    border-radius: 50%;
+    padding: 0.7rem;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 50;
+    animation-duration: 1s;
+    animation-name: subir;
+    animation-iteration-count: infinite;
+}
+
+.botao-rodape-whatsapp {
+    width: 50px;
+    height: 50px;
+    background: #25D366;
+    border-radius: 50%;
+    padding: 0.7rem;
+    position: fixed;
+    bottom: 1rem;
+    right: 4.5rem;
+    z-index: 50;
+    animation-duration: 1s;
+    animation-name: subir;
+    animation-iteration-count: infinite;
+}
+
+.logotipo-rodape {
+    width: 8rem;
+    height: 2rem;
+    filter: invert(100%);
+}
+
+
+.linha-rodape-menu {
+    color: #D7D7D9;
+    background: #212226;
+    display: flex;
+    padding: 0 0 1vw 3vw;
+    gap: 1rem;
+    font-weight: 700;
+    font-size: 0.8rem;
+    text-decoration: underline;
+}
+
+.linha-rodape-menu-copyright {
+    color: #D7D7D9;
+    background: #212226;
+    display: flex;
+    padding: 0 0 1vw 3vw;
+    gap: 1rem;
+    font-weight: 700;
+    font-size: 0.7rem;
+}
+
+.linha-rodape-menu-dev a{
+    color: #D7D7D9;
+    background: #212226;
+    display: flex;
+    padding: 0 0 1vw 10vw;
+    font-weight: 700;
+    text-decoration: underline;
+    font-size: 0.7rem;
+    text-decoration: none;
+    font-weight: 400;
+    gap: 0.3rem;
+    justify-content: right;
+}
+
+.linha-rodape-menu-dev span {
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.rodape-redes-sociais {
+    width: 6vw;
+    height: 6vw;
+    filter: invert(80%);
+}
+
+@keyframes subir {
+    from {
+        bottom: 1rem;
+    }
+
+    to {
+        bottom: 1.5rem;
+    }
+}
+
+
+@media (min-width: 768px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Barlow", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        scrollbar-width: thin;
+        scrollbar-color: #D7D7D9 #212226;
+        scrollbar-arrow-color: #D7D7D9;
+    }
+    
+    html {
+        height: 200vh;
+        scroll-behavior: smooth;
+    }
+    
+    .cabecalho {
+        background: #f1f1f5;
+        position: fixed;
+        z-index: 50;
+        width: 100vw;
+    }
+
+    .navbar {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 1rem;
+    align-items: center;
+    font-size: 1rem;
+    height: 4.5rem;
+}
+
+    .navbar a{
+        text-decoration: none;
+        color: #3C3D40;
+    }
+
+    .logotipo {
+        margin-top: 1rem;
+        width: 12rem;
+        height: 3rem;
+        position: relative;
+        z-index: 50;
+        margin-left: 0;
+    }
+
+    .logotipo:hover {
+        width: 13rem;
+        height: 3.5rem;
+        transition: 100ms ease-in;
+    }
+
+    .ajuste {
+        height: 4rem;
+    }
+
+    .secao-slide {
+        margin-bottom: 7rem;
+    }
+
+    .slider {
+        display: block;
+        height: 50vw;
+        width: 100vw;
+        margin: auto;
+        position: relative;
+    }
+    
+    .slider li {
+        list-style: none;
+        position: absolute;
+    }
+    
+    .slider img {
+        margin: auto;
+        height: 100%;
+        width: 100%;
+        vertical-align: top;
+    }
+    
+    .slider input {
+        display: none;
+    }
+    
+    .slider label {
+        animation-duration: 0.5s;
+        animation-name: subir;
+        animation-iteration-count: calc(5);
+        margin: 0 0 0 10rem;
+        background: #D7D7D9;
+        bottom: 10px;
+        cursor: pointer;
+        display: block;
+        height: 2vw;
+        position: absolute;
+        width: 2vw;
+        z-index: 10;
+        font-size: 1;
+        font-weight: bold;
+        }
+
+    .slider input:checked + label {
+        background: #212226;
+    }
+
+    .slider label:hover {
+        margin: 0 0 0 10rem;
+        background: #212226;
+        bottom: 10px;
+        cursor: pointer;
+        display: block;
+        height: 2vw;
+        position: absolute;
+        width: 2vw;
+        z-index: 10;
+    }
+    
+    .slider li:nth-child(1) label {
+        left: 10px;
+    }
+    
+    .slider li:nth-child(2) label {
+        left: 40px;
+    }
+    
+    .slider li:nth-child(3) label {
+        left: 70px;
+    }
+    
+    .slider img {
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s ease-in-out;
+    }
+    
+    .slider li input:checked ~ img {
+        opacity: 1;
+        visibility: visible;
+        z-index: 10;
+    }
+
+    .img-escritorio {
+        width: 99vw;
+        height: 80vh;
+    }
+    
+    .subtituloh3-secao {
+        margin: 2rem 0rem 1.5rem 4rem;
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
+    
+    .subtituloh2-secao {
+        margin: 2rem 0rem 0.3rem 3rem;
+        font-size: 3rem;
+    }
+
+    .img-servicos {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 3fr));
+        margin: 0 1rem;
+    }
+    
+    /* .img-servicos div:nth-child(1) {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+
+    .img-servicos div:nth-child(5) {
+        grid-column-start: 2;
+        grid-column-end: 5;
+    } */
+
+    .img-servicos div {     
+        margin: 0.5rem 0.25rem;
+        max-height: 20vw;
+    }
+
+
+    .img-servicos img {     
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        filter: grayscale(1);
+    }
+
+    .img-servicos img:hover {     
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        filter: grayscale(0);
+        transition: 300ms ease-in-out;
+    }
+
+    .navbar ul {
+        list-style-type: none;
+        color: #3C3D40;
+        display: flex;
+        gap: 2rem;  
+        position: static;
+        padding-top: 0;
+
+    }
+    
+    .navbar a {
+        text-decoration: none;
+        color: #3C3D40;
+        font-size: 1.2rem;
+    }
+
+    .navbar a:hover{
+        font-size: 1.3rem;
+        transition: 50ms ease-in;
+    }
+
+    .navbar a:visited {
+        color: #3C3D40;
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        margin: 0.5rem 1rem;
+        align-items: center;
+        font-size: 1rem;
+        height: 3rem;
+        margin-right: 2rem;
+        }
+
+    .rodape {
+        width: 100vw;
+    }
+
+    .rodape address{
+        background: #212226;
+        color: #D7D7D9;
+        font-style: normal;
+        margin-top: 1rem;
+        padding: 0.5rem 2rem;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .enderecos {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+    }
+
+    .rodape-email {
+        text-decoration: underline;
+        color: #D7D7D9;
+        margin: 0 1rem 0 0;
+    }
+
+    .linha-rodape-email {
+        background: #212226;
+        display: flex;
+        padding: 0 0 1vw 10vw;
+    }
+
+    .secao-tabela {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .tabela-cotacao {
+        border-collapse: collapse;
+        width: 90vw;
+        border-top: 1px solid #D7D7D9;
+        border-bottom: 1px solid #D7D7D9;
+    }
+
+    .tabela-cotacao-head {
+        border-collapse: collapse;
+        text-align: center;
+        border-bottom: 1px solid #D7D7D9;
+        font-weight: 100;
+    }
+
+    
+    .tabela-cotacao-data {
+        border-collapse: collapse;
+        text-align: center;
+        border-top: 1px solid #D7D7D9;
+        border-bottom: 1px solid #D7D7D9;
+        font-size: 1.5rem;
+    }
+
+    .div-localizacao {
+        display: flex;
+        justify-content: center;
+    }
+
+    .div-contato {
+        background: #3C3D40;
+        width: 100vw;
+        height: 11vw;
+        display: flex;
+    }
+
+    .div-sobre-nos {
+        background: #3C3D40;
+        width: 100vw;
+        height: 30vw;
+        display: flex;
+    }
+
+    .info-campo-email {
+        margin: 0.5rem;
+        text-decoration: none;
+        text-align: start;
+        width: 30vw;
+        padding: 0;
+    }
+
+    .info-sobre-nos {
+        margin: 1rem 2rem;
+        color: #D7D7D9;
+        font-size: 1.5rem;
+    }
+
+    .img-contato-email {
+        margin: 0.3rem;
+        width: 1.5vw;
+        height: 1.5vw;
+        filter: invert(80%);
+        margin: 0 1vw;
+    }
+
+    .link-contato-email{
+        text-decoration: underline;
+        color: #D7D7D9;
+        font-size: 1.2rem;
+    }
+
+    .info-campo-telefone {
+        margin: 0.5rem;
+        text-decoration: none;
+        text-align: start;
+        width: 15vw;
+    }
+
+
+    .img-contato-telefone {
+        margin: 0.3rem;
+        width: 1.5vw;
+        height: 1.5vw;
+        filter: invert(80%);
+        margin: 0 1vw;
+    }
+
+    .link-contato-telefone {
+        text-decoration: underline;
+        color: #D7D7D9;
+        font-size: 1.2rem;
+    }
+
+    .img-contato {
+        margin: 0.4rem 2rem;
+        width: 30vw;
+        height: 10vw;
+    }
+
+    .img-sobre-nos {
+        margin: 1rem 2rem;
+        width: 30vw;
+        height: 27vw;
+    }
+
+    .mapa-localizacao {
+        width: 100vw;
+        height: 50vw;
+    }
+
+    .logotipo-rodape {
+        width: 12rem;
+        height: 3.5rem;
+        filter: invert(100%);
+    }
+
+    .botao-rodape-topo {
+        width: 50px;
+        height: 50px;
+        background: #D7D7D9;
+        border-radius: 50%;
+        padding: 0.7rem;
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        z-index: 50;
+        animation-duration: 1s;
+        animation-name: subir;
+        animation-iteration-count: infinite;
+    }
+    
+    .botao-rodape-whatsapp {
+        width: 50px;
+        height: 50px;
+        background: #25D366;
+        border-radius: 50%;
+        padding: 0.7rem;
+        position: fixed;
+        bottom: 1rem;
+        right: 5.5rem;
+        z-index: 50;
+        animation-duration: 1s;
+        animation-name: subir;
+        animation-iteration-count: infinite;
+    }
+
+    .linha-rodape-menu {
+        color: #D7D7D9;
+        background: #212226;
+        display: flex;
+        padding: 0 0 1vw 10vw;
+        gap: 2rem;
+        font-weight: 700;
+        text-decoration: underline;
+        font-size: 1rem;
+    }
+
+    .linha-rodape-menu-copyright {
+        color: #D7D7D9;
+        background: #212226;
+        display: flex;
+        padding: 0 0 1vw 10vw;
+        gap: 1rem;
+        font-weight: 700;
+        font-size: 0.7rem;
+    }
+
+    .linha-rodape-menu-dev a{
+        color: #D7D7D9;
+        background: #212226;
+        display: flex;
+        padding: 0 0 1vw 10vw;
+        font-weight: 700;
+        text-decoration: underline;
+        font-size: 0.7rem;
+        text-decoration: none;
+        font-weight: 400;
+        gap: 0.3rem;
+        justify-content: right;
+    }
+
+    .linha-rodape-menu-dev span {
+        font-weight: bold;
+        margin-right: 2rem;
+    }
+
+    .rodape-redes-sociais {
+        width: 3vw;
+        height: 3vw;
+        filter: invert(80%);
+    }
+
+    .rodape-redes-sociais:hover {
+        width: 3vw;
+        height: 3vw;
+        filter: invert(30%);
+    }
+}

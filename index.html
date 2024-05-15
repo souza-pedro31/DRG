@@ -3,73 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DRG</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
+    <title>DRG Consultoria Tributária</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <header class="cabecalho" id="cabecalho">
         <nav class="navbar" id="navbar">
-            <img src="./assets/logotipo.png" alt="logotipo empresa" class="logotipo">
+            <a href="#ajuste"><img src="./assets/img/logotipo.png" alt="logotipo empresa" class="logotipo"></a>
             <ul>
-                <li><a href="#portfolio">Portfólio</a></li>
+                <li><a href="#sobre-nos">Sobre nós</a></li>
+                <li><a href="#area-atuacao">Áreas de atuação</a></li>
                 <li><a href="#escritorio">Escritório</a></li>
-                <li><a href="#">Opção 3</a></li>
-                <li><a href="#">Opção 4</a></li>
+                <li><a href="#cotacao">Cotações</a></li>
+                <li><a href="#localizacao">Localização</a></li>
                 <li><a href="#rodape">Contato</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <section>
+        <section class="ajuste" id="ajuste"></section>
+        <section class="secao-slide">
             <header>
-                <h1>
-                    <img src="./assets/slide1.png" alt="adicionar depois"  class="slide">
-                </h1>
+                <ul class="slider">
+                    <li>
+                        <input type="radio" id="slide1" name="slide" checked>
+                        <label for="slide1">1</label>
+                        <img src="./assets/img/slide1.jpg" alt="adicionar depois">
+                    </li>
+                    <li>
+                        <input type="radio" id="slide2" name="slide">
+                        <label for="slide2">2</label>
+                        <img src="./assets/img/slide2.jpg" alt="adicionar depois">
+                    </li>
+                    <li>
+                        <input type="radio" id="slide3" name="slide">
+                        <label for="slide3">3</label>
+                        <img src="./assets/img/slide3.jpg" alt="adicionar depois">
+                    </li>
+                </ul>
             </header>
         </section>
-        <section class="portfolio" id="portfolio">
+
+        <section class="sobre-nos" id="sobre-nos">
             <header>
-                <h3 class="podemos-ajudar">Veja nossos trabalhos!</h3>
-                <h2 class="servicos-titulo">Nossos portfólios</h2>
-                <div  class="img-servicos">
+                <h3 class="subtituloh3-secao">Somos a DRG Consultoria Tributária</h3>
+                <h2 class="subtituloh2-secao">Conheça um pouco da nossa história</h2>
+                <div class="div-sobre-nos">
                     <div>
-                        <a href="./pdf/informe01.pdf"><img src="./assets/gatoteste.jpg" alt="adicionar depois"></a>
+                        <img src="./assets/img/frente-escritorio.jpg" alt="adicionar depois" class="img-sobre-nos">
                     </div>
-                    <div>
-                        <a href="./pdf/informe01.pdf"><img src="./assets/gatoteste.jpg" alt="adicionar depois"></a>
+                    <div class="info-sobre-nos">
+                        <p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis cum alias impedit doloribus sequi odio ab, culpa repudiandae quaerat sit reiciendis dolorum, recusandae debitis earum autem, quos id neque. Alias. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, libero! Ipsa quibusdam aut at impedit quidem, maxime aliquid totam enim magnam quis. Earum deserunt ipsam doloremque aperiam eum illo! Aliquam.</p>
+                        </p>
                     </div>
-                    <div>
-                        <a href="./pdf/informe01.pdf"><img src="./assets/gatoteste.jpg" alt="adicionar depois"></a>
-                    </div>
-                    <div>
-                        <a href="./pdf/informe01.pdf"><img src="./assets/gatoteste.jpg" alt="adicionar depois"></a>
-                    </div>
-                    <div>
-                        <a href="./pdf/informe01.pdf"><img src="./assets/gatoteste.jpg" alt="adicionar depois"></a>
                 </div>
             </header>
         </section>
+
+
+        <section class="area-atuacao" id="area-atuacao">
+            <header>
+                <h3 class="subtituloh3-secao">Conheça nossos trabalhos!</h3>
+                <h2 class="subtituloh2-secao">Abrangemos vários tipos de serviços!</h2>
+                <div  class="img-servicos">
+                    <div>
+                        <a href="./assets/pdf/informe01.pdf"><img src="./assets/img/slide1.jpg" alt="adicionar depois"></a>
+                    </div>
+                    <div>
+                        <a href="#"><img src="./assets/img/slide2.jpg" alt="adicionar depois"></a>
+                    </div>
+                    <div>
+                        <a href="#"><img src="./assets/img/slide3.jpg" alt="adicionar depois"></a>
+                    </div>
+                    <div>
+                        <a href="#"><img src="./assets/img/slide1.jpg" alt="adicionar depois"></a>
+                    </div>
+                </div>
+            </header>
+        </section>
+
         <section class="escritorio" id="escritorio">
             <header>
-                <h3 class="podemos-ajudar">Conheça nossas instalações</h3>
-                <h2 class="servicos-titulo">O escritório</h2>
+                <h3 class="subtituloh3-secao">Visite nossas instalações!</h3>
+                <h2 class="subtituloh2-secao">Escritório bonito, limpo e climatizado!</h2>
                 <p>
-                    <img src="./assets/imgescritorio.jpg" alt="adicionar depois"  class="slide">
+                    <img src="./assets/img/imgescritorio.jpg" alt="adicionar depois"  class="img-escritorio">
                 </p>
             </header>
         </section>
+
+        <section class="cotacao" id="cotacao">
+            <header>
+                <h3 class="subtituloh3-secao">Cotações das moedas em tempo real!</h3>
+                <h2 class="subtituloh2-secao" id="subtituloh2-secao"></h2>
+                <article class="secao-tabela">
+                    <table class="tabela-cotacao">
+                        <thead>
+                            <tr>
+                                <th class="tabela-cotacao-head">Cotação</th>
+                                <th class="tabela-cotacao-head">Valor atual</th>
+                                <th class="tabela-cotacao-head">Alta</th>
+                                <th class="tabela-cotacao-head">Baixa</th>
+                                <th class="tabela-cotacao-head">Variação</th>
+                            </tr>
+                        </thead>
+                        <tbody class="tabela-cotacao-body" id="moedas-body">
+                        </tbody>
+                    </table>
+                </article>
+            </header>
+        </section>
+
+        <section class="localizacao" id="localizacao">
+            <header>
+                <h3 class="subtituloh3-secao">Presença física no Centro do Rio de Janeiro</h3>
+                <h2 class="subtituloh2-secao">Perto de você!</h2>
+                <div class="div-localizacao">
+                    <iframe class="mapa-localizacao" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.2427587327893!2d-43.1755798!3d-22.9044152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997f5f773312b3%3A0xc0fd61de895b9258!2sR.%20do%20Carmo%2C%2011%20-%20Centro%2C%20Rio%20de%20Janeiro%20-%20RJ%2C%2020011-020!5e0!3m2!1spt-BR!2sbr!4v1715110201437!5m2!1spt-BR!2sbr" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </header>
+        </section>
+
+        <!-- <section class="contato" id="contato">
+            <header>
+                <h3 class="subtituloh3-secao">Conte com nossos profissionais especializados!</h3>
+                <h2 class="subtituloh2-secao">Podemos te ajudar!</h2>
+                <div class="div-contato">
+                    <div>
+                        <img src="./assets/img/img recepcionista.jpg" alt="adicionar depois" class="img-contato">
+                    </div>
+                    <div>
+                        <p class="info-campo-email">
+                            <a href="mailto:comercial@drgconsultoria.com.br" class="link-contato-email">
+                                <img src="./assets/img/icone-envelope.png" alt="ícone de um envelope de e-mail" class="img-contato-email" target="_blank">
+                                comercial@drgconsultoria.com.br
+                            </a>
+                        </p>
+                    </div>
+                    <div>
+                        <p class="info-campo-telefone">
+                            <a href="https://api.whatsapp.com/send?phone=5521999862920&text=Ol%C3%A1,%20bom%20dia!%20Tudo%20bem?%0AEu%20quero%20ser%20cliente%20da%20DRG!" class="link-contato-telefone" target="_blank">
+                                <img src="./assets/img/icone-chamada-telefonica.png" alt="ícone de um telefone" class="img-contato-telefone">
+                                (21)99986-2920
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </header>
+        </section> -->
+
     </main>
+
     <footer class="rodape" id="rodape">
-        <address>
-            <p>
-                Rua do Carmo, nº 11, 9º andar -
-                Centro, Rio de Janeiro - 
+        <address class="enderecos">
+            <img src="./assets/img/logotipo.png" alt="logotipo empresa" class="logotipo-rodape">
+            <p class="parag-endereco">
+                Rua do Carmo, nº 11, 9º andar<br>
+                Centro, Rio de Janeiro<br>
                 CEP 20011-020. Rio de Janeiro/RJ
             </p>
-            <p><a href="mailto:comercial@drgconsultoria.com.br" class="rodape-email">comercial@drgconsultoria.com.br</a></p>
-            <a href="#cabecalho"><img class="botao-rodape" src="./assets/seta-direita.png" alt="adicionar depois"></a>
+            <a href="#ajuste"><img class="botao-rodape-topo" src="./assets/img/seta-direita.png" alt="imagem de uma seta apontada para cima"></a>
+            <a href="https://api.whatsapp.com/send?phone=5521999862920&text=Ol%C3%A1,%20bom%20dia!%20Tudo%20bem?%0AEu%20quero%20ser%20cliente%20da%20DRG!" target="_blank"><img class="botao-rodape-whatsapp" src="./assets/img/icone-whatsapp.png" alt="ícone de um celular"></a>
         </address>
+        <div class="linha-rodape-email">
+            <p><a href="mailto:comercial@drgconsultoria.com.br" class="rodape-email">comercial@drgconsultoria.com.br</a></p>
+            <p><a href="https://api.whatsapp.com/send?phone=5521999862920&text=Ol%C3%A1,%20bom%20dia!%20Tudo%20bem?%0AEu%20quero%20ser%20cliente%20da%20DRG!" class="rodape-email">(21)99986-2920</a></p>
+        </div>
+        <div class="linha-rodape-menu">
+            <p><a href="https://www.facebook.com/" target="_blank"><img src="./assets/img/icone-facebook.png" alt="" class="rodape-redes-sociais"></a></p>
+            <p><a href="https://www.instagram.com/drgconsultoriatrib/" target="_blank"><img src="./assets/img/icone-instagram.png" alt="" class="rodape-redes-sociais"></a></p>
+            <p><a href="https://www.linkedin.com/" target="_blank"><img src="./assets/img/icone-linkedin.png" alt="" class="rodape-redes-sociais"></a></p>
+            <p><a href="https://www.youtube.com" target="_blank"><img src="./assets/img/icone-youtube.png" alt="" class="rodape-redes-sociais"></a></p>
+        </div>
+        <div class="linha-rodape-menu-copyright">
+            <p>© 2024 DRG Consultoria Tributária<br>20.896.493/0001-05<br>DRG CONSULTORIA TRIBUTARIA</p>
+        </div>
+        <div class="linha-rodape-menu-dev">
+            <p><a href="https://github.com/souza-pedro31" target="_blank">desenvolvido por: <span>souza-pedro31</span></a></p>
+        </div>
     </footer>
+
+<script>
+    const url = 'https://economia.awesomeapi.com.br/json/last/USD-BRL,EUR-BRL,JPY-BRL,GBP-BRL,CHF-BRL,CAD-BRL,AUD-BRL,NZD-BRL,CNY-BRL,INR-BRL';
+    const ult_atualizacao = document.getElementById('subtituloh2-secao');
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            const moedasBody = document.getElementById('moedas-body');
+            for (const moeda in data) {
+                if (data.hasOwnProperty(moeda)) {
+                    const ult_atualizacao_api = data[moeda].create_date;
+                    const dataHora = new Date(ult_atualizacao_api);
+
+                    const dia = String(dataHora.getDate()).padStart(2, '0');
+                    const mes = String(dataHora.getMonth() + 1).padStart(2, '0');
+                    const ano = dataHora.getFullYear();
+
+                    const horas = String(dataHora.getHours()).padStart(2, '0');
+                    const minutos = String(dataHora.getMinutes()).padStart(2, '0');
+                    const segundos = String(dataHora.getSeconds()).padStart(2, '0');
+
+                    const ult_atualizacao_formatada = `${dia}/${mes}/${ano} às ${horas}:${minutos}:${segundos}`;
+
+                    const cotacao = data[moeda].name;
+                    const valorAtual = data[moeda].bid;
+                    const valorMaximo = data[moeda].high;
+                    const valorMinimo = data[moeda].low;
+                    const variacao = data[moeda].varBid;
+
+                    const row = document.createElement('tr');
+                    row.classList.add('tabela-cotacao-data');
+                    row.innerHTML = `
+                        <td>${cotacao}</td>
+                        <td>${valorAtual}</td>
+                        <td>${valorMaximo}</td>
+                        <td>${valorMinimo}</td>
+                        <td>${variacao}</td>
+                    `;
+                    moedasBody.appendChild(row);
+                    ult_atualizacao.textContent = `Última atualização: ${ult_atualizacao_formatada}`;
+                }
+            }
+        })
+        .catch(error => console.error('Erro ao obter dados da API:', error));
+
+
+
+        function avancarSliderAutomatico() {
+        const slides = document.querySelectorAll('input[name="slide"]');
+        let slideAtual = 0;
+
+        setInterval(() => {
+            slideAtual = (slideAtual + 1) % slides.length;
+            slides[slideAtual].checked = true;
+        }, 3000);
+    }
+
+    window.onload = avancarSliderAutomatico;
+</script>
+
 </body>
 </html>
